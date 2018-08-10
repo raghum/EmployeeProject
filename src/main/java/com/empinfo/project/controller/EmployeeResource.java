@@ -35,7 +35,7 @@ public class EmployeeResource {
 	}
 	
 	@RequestMapping(value = "/updateEmployee/{employeeId}", method=RequestMethod.GET)
-	public String updateEmployee(@PathVariable("employeeId") long employeeId, Model model) {
+	public String updateEmployeeDetails(@PathVariable("employeeId") long employeeId, Model model) {
 		model.addAttribute("employee", employeeService.getEmployee(employeeId));
 		return "updateemployee";
 	}
