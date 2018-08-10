@@ -43,14 +43,14 @@ public class EmployeeResource {
 	public String updateEmployee(@PathVariable("employeeId") long employeeId, Employee employee) {
 		employee.setId(employeeId);
 		employeeService.updateEmployee(employee);
-		 return "redirect:getAllEmployees";
+		 return "redirect:/getAllEmployees";
 	}
 
 	@RequestMapping(value = "/delEmployee/{employeeId}", method=RequestMethod.DELETE)
 	public String delEmployee(@PathVariable("employeeId") long employeeId, Model model) {
 		
 		employeeService.deleteEmployee(employeeId);
-		return "redirect:getAllEmployees";
+		return "redirect:/getAllEmployees";
 	}
 
 	@RequestMapping(value = "getemployee/{employeeId}", method=RequestMethod.GET)
